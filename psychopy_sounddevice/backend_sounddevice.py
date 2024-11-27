@@ -259,6 +259,7 @@ class SoundDeviceSound(_SoundBase):
     """
 
     def __init__(self, value="C", secs=0.5, octave=4, stereo=-1,
+                 speaker=None,
                  volume=1.0, loops=0,
                  sampleRate=None, blockSize=128,
                  preBuffer=-1,
@@ -292,6 +293,7 @@ class SoundDeviceSound(_SoundBase):
         :param autoLog: whether to automatically log every change
         """
         self.sound = value
+        self.speaker = speaker
         self.name = name
         self.secs = secs  # for any synthesised sounds (notesand freqs)
         self.octave = octave  # for note name sounds
